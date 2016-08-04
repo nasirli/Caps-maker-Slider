@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <style>
+   html,body{
+       padding: 0px;
+       margin: 0px;
+    }
+    .main{
+       width: 900px;
+       margin: 0 auto;
+    }
+    img{
+       width: 900px;
+    }
+    input{
+       text-align: center;
+       width: 900px;
+       height: 50px;
+    }
+    input{
+       text-align: center;
+       width: 900px;
+       height: 50px;
+    }
+    button{
+       width: 100px;
+       height: 50px;
+       background: green;
+       float: left;
+       cursor: pointer;
+    }
+    p{
+       text-align: center;
+       position: relative;
+       bottom: 20px;
+       font-size: 20px;
+       background: red;
+       margin: 0px;
+       color: white;
+    }
+      </style>
+   </head>
+   <body>
+      <script type="text/javascript">
+// MAIN 
+      var maindiv = document.createElement("div");
+      maindiv.setAttribute("class","main");
+      document.body.appendChild(maindiv);
+// IMG
+      var imageTag = document.createElement("img");
+      imageTag.setAttribute("src","images/01.jpg");
+      maindiv.appendChild(imageTag);
+// P
+      var pTag = document.createElement("p");
+      maindiv.appendChild(pTag );
+      var pTagText = document.createTextNode("I AM TEYMUR NASIRLI");
+      pTag.appendChild(pTagText);
+// INPUT,SOURCE
+      var imgSrc = document.createElement("input");
+      imgSrc.setAttribute("type","text");
+      imgSrc.setAttribute("value","Image Source");
+      maindiv.appendChild(imgSrc);
+// Add button
+      var FirstButton = document.createElement("button");
+      FirstButton.setAttribute("onclick","add()");
+// Add button text
+      var buttonText = document.createTextNode("sekil elave et");
+      FirstButton.appendChild(buttonText);
+      maindiv.appendChild(FirstButton);
+// input tag text source
+      var textSrc = document.createElement("input");
+      textSrc.setAttribute("onclick","add1()");
+      textSrc.setAttribute("value","text source");
+      maindiv.appendChild(textSrc);
+// Add button1
+      var SecondButton = document.createElement("button");
+      SecondButton.setAttribute("onclick","add1()");
+// Add button text1
+      var buttonText = document.createTextNode("yazi elave et");
+      SecondButton.appendChild(buttonText);
+      maindiv.appendChild(SecondButton);
+
+  var sekil = document.getElementsByTagName("img")[0];
+  var img = document.getElementsByTagName("input")[0];
+  var text = document.getElementsByTagName("input")[1];
+
+   function add1(){
+      var textInput=text.value;
+         document.getElementsByTagName("p")[0].innerHTML=textInput;
+         }
+
+   function add(){
+      var photoInput = img.value;
+         document.getElementsByTagName("img")[0].src=photoInput;
+            }
+      </script>
+   </body>
+</html>
